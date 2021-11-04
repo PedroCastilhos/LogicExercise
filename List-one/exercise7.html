@@ -1,0 +1,24 @@
+<!-- 6) Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a
+área do retângulo.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 6</title>
+  </head>
+  <body>
+    <span>A área do retângulo é</span>
+    <span class="answer"></span>
+
+    <script>
+      const height = window.prompt('Digite a altura do retângulo');
+      const base = window.prompt('Digite a base do retângulo');
+      const area = base * height;
+
+      const result = document.querySelector('.answer');
+
+      result.innerHTML = area;
+      console.log(area);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!-- 5)Escreva um algoritmo para ler um valor (do teclado) e escrever (na tela) o
+seu antecessor. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 5</title>
+  </head>
+  <body>
+    <span>A valor escolhido foi</span>
+    <span class="answer"></span>
+
+    <script>
+      var valor = window.prompt('Digite um número');
+      const result = document.querySelector('.answer');
+
+      result.innerHTML = valor;
+      console.log(valor);
+    </script>
+  </body>
+</html>
