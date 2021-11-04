@@ -1,24 +1,27 @@
-<!-- 6) Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a
-área do retângulo.  -->
+<!-- 7) Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade
+dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.  -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Exercise 6</title>
+    <title>Exercise 7</title>
   </head>
   <body>
     <span>A área do retângulo é</span>
     <span class="answer"></span>
 
     <script>
-      const height = window.prompt('Digite a altura do retângulo');
-      const base = window.prompt('Digite a base do retângulo');
-      const area = base * height;
+      let date = new Date();
+      let year = date.getMonth();
+      console.log(year);
+      // const height = window.prompt('Digite a altura do retângulo');
+      // const base = window.prompt('Digite a base do retângulo');
+      // const area = base * height;
 
-      const result = document.querySelector('.answer');
+      // const result = document.querySelector('.answer');
 
-      result.innerHTML = area;
-      console.log(area);
+      // result.innerHTML = area;
+      // console.log(area);
     </script>
   </body>
 </html>

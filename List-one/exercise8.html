@@ -1,0 +1,42 @@
+<!-- 8) Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos
+brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total
+de eleitores. .  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 8</title>
+  </head>
+  <body>
+    <span>O número de votos válidos são: </span>
+    <span class="valids"></span>
+    <br />
+    <span>O número de votos brancos são: </span>
+    <span class="whites"></span>
+    <br />
+    <span>O número de votos nulos são: </span>
+    <span class="nules"></span>
+
+    <p>A porcentagem dos votos ficou da seguinte forma:</p>
+    <p>votos válidos</p>
+
+    <script>
+      const valids = Number(window.prompt('Número de votos válidos'));
+      const whites = Number(window.prompt('Número de votos brancos'));
+      const nules = Number(window.prompt('Número de votos nulos'));
+      const total = whites + nules + valids;
+
+      const numberValids = document.querySelector('.valids');
+      const numberWhites = document.querySelector('.whites');
+      const numberNules = document.querySelector('.nules');
+      const result = document.querySelector('.answer');
+
+      numberValids.innerHTML = valids;
+      numberWhites.innerHTML = whites;
+      numberNules.innerHTML = nules;
+
+      result.innerHTML = total;
+      console.log(total);
+    </script>
+  </body>
+</html>
