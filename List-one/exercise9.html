@@ -1,0 +1,38 @@
+<!-- 9) Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste.
+Calcular e escrever o valor do novo salário.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 9</title>
+  </head>
+  <body>
+    <span>O salário é: </span>
+    <span class="salario"></span>
+    <br />
+    <span>O percentual aumentado será de: </span>
+    <span class="porcentagem"></span>
+    <br />
+    <span>O salário reajustado ficará:</span>
+    <span class="readjustment"></span>
+
+    <script>
+      const salario = Number(window.prompt('Qual é o valor do salário mensal'));
+      const porcentagem = Number(
+        window.prompt(
+          'Quanto será o reajuste salarial?',
+          'Não precisa digitar o símbolo de porcentagem'
+        )
+      );
+      const readjustment = (salario * porcentagem) / 100 + salario;
+
+      const numbersalario = document.querySelector('.salario');
+      const numberporcentagem = document.querySelector('.porcentagem');
+      const numberReadjustment = document.querySelector('.readjustment');
+
+      numbersalario.innerHTML = salario;
+      numberporcentagem.innerHTML = `${porcentagem}%`;
+      numberReadjustment.innerHTML = `${readjustment.toFixed(0)} R$`;
+    </script>
+  </body>
+</html>

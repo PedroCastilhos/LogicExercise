@@ -1,0 +1,29 @@
+<!-- 1) Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu
+perímetro.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <span>O perímetro do retângulo é</span>
+    <span class="answer1"></span>
+    <br />
+    <span>A área do retângulo é</span>
+    <span class="answer2"></span>
+
+    <script>
+      const base = Number(window.prompt('Digite a altura do retângulo'));
+      const height = Number(window.prompt('Digite a base do retângulo'));
+      const perimeter = base * 2 + height * 2;
+      const area = base * height;
+
+      const result1 = document.querySelector('.answer1');
+      const result2 = document.querySelector('.answer2');
+
+      result1.innerHTML = perimeter;
+      result2.innerHTML = `${area}m²`;
+    </script>
+  </body>
+</html>

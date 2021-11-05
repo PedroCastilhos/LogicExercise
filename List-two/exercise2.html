@@ -1,0 +1,30 @@
+<!-- 2) Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <span>O perímetro do quadrado é</span>
+    <span class="answer1"></span>
+    <br />
+    <span>A área do quadrado é</span>
+    <span class="answer2"></span>
+
+    <script>
+      const side = Number(
+        window.prompt('Digite o tamanho do lado de um quadrado')
+      );
+
+      const perimeter = side * 4;
+      const area = side * side;
+
+      const result1 = document.querySelector('.answer1');
+      const result2 = document.querySelector('.answer2');
+
+      result1.innerHTML = perimeter;
+      result2.innerHTML = `${area}m²`;
+    </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 <!-- 8) Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos
 brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total
-de eleitores. .  -->
+de eleitores.   -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,27 +16,49 @@ de eleitores. .  -->
     <br />
     <span>O número de votos nulos são: </span>
     <span class="nules"></span>
+    <br />
+    <span>O total de votos são:</span>
+    <span class="result"></span>
 
     <p>A porcentagem dos votos ficou da seguinte forma:</p>
-    <p>votos válidos</p>
+
+    <span class="porcentageValids"></span>
+    <br />
+    <span class="porcentageWhites"></span>
+    <br />
+    <span class="porcentageNules"></span>
 
     <script>
       const valids = Number(window.prompt('Número de votos válidos'));
       const whites = Number(window.prompt('Número de votos brancos'));
       const nules = Number(window.prompt('Número de votos nulos'));
       const total = whites + nules + valids;
+      const porcentageValids = (valids * 100) / total;
+      const porcentageWhites = (whites * 100) / total;
+      const porcentageNules = (nules * 100) / total;
 
       const numberValids = document.querySelector('.valids');
       const numberWhites = document.querySelector('.whites');
       const numberNules = document.querySelector('.nules');
-      const result = document.querySelector('.answer');
+      const numberPorcetageValids = document.querySelector('.porcentageValids');
+      const numberPorcetageWhites = document.querySelector('.porcentageWhites');
+      const numberPorcetageNules = document.querySelector('.porcentageNules');
+      const result = document.querySelector('.result');
 
       numberValids.innerHTML = valids;
       numberWhites.innerHTML = whites;
       numberNules.innerHTML = nules;
+      numberPorcetageValids.innerHTML = `Votos Válidos: ${porcentageValids.toFixed(
+        2
+      )}%`;
+      numberPorcetageWhites.innerHTML = `Votos Brancos: ${porcentageWhites.toFixed(
+        2
+      )}%`;
+      numberPorcetageNules.innerHTML = `Votos Nulos: ${porcentageNules.toFixed(
+        2
+      )}%`;
 
       result.innerHTML = total;
-      console.log(total);
     </script>
   </body>
 </html>
