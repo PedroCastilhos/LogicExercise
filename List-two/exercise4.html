@@ -1,0 +1,41 @@
+<!-- 4) Dado os três lados de um triângulo determinar o perímetro do mesmo.   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 4</title>
+  </head>
+  <body>
+    <span>Lado um do triângulo: </span>
+    <span class="side1"></span>
+    <br />
+    <span>Lado dois do triângulo: </span>
+    <span class="side2"></span>
+    <br />
+    <span>Lado tres do triângulo: </span>
+    <span class="side3"></span>
+    <br />
+    <span>Perimetro do triângulo: </span>
+    <span class="perimeter"></span>
+
+    <script>
+      const side1 = Number(window.prompt('Digite um lado do triângulo'));
+      const side2 = Number(window.prompt('Digite o segundo lado do triângulo'));
+      const side3 = Number(
+        window.prompt('Digite o terceiro lado do triângulo')
+      );
+
+      const perimeter = side1 + side2 + side3;
+
+      const result1 = document.querySelector('.side1');
+      const result2 = document.querySelector('.side2');
+      const result3 = document.querySelector('.side3');
+      const result4 = document.querySelector('.perimeter');
+
+      result1.innerHTML = side1;
+      result2.innerHTML = side2;
+      result3.innerHTML = side3;
+      result4.innerHTML = perimeter;
+    </script>
+  </body>
+</html>

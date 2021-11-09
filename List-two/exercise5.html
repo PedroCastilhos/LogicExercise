@@ -1,0 +1,27 @@
+<!-- 5) Ler um número inteiro e exibir o seu sucessor.   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 5</title>
+  </head>
+  <body>
+    <span>Numero escolhido: </span>
+    <span class="number"></span>
+    <br />
+    <span>Sucessor desse número: </span>
+    <span class="number2"></span>
+
+    <script>
+      const number = Number(window.prompt('Digite um número'));
+
+      const number2 = number + 1;
+
+      const result1 = document.querySelector('.number');
+      const result2 = document.querySelector('.number2');
+
+      result1.innerHTML = number;
+      result2.innerHTML = number2;
+    </script>
+  </body>
+</html>

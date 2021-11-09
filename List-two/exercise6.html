@@ -1,0 +1,39 @@
+<!-- 6) Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 6</title>
+  </head>
+  <body>
+    <span>Numero 1 escolhido: </span>
+    <span class="number"></span>
+    <br />
+    <span>Número 2 escolhido: </span>
+    <span class="number2"></span>
+    <br />
+    <span>Quociente desses números: </span>
+    <span class="quociente"></span>
+    <br />
+    <span>Resto desses números: </span>
+    <span class="resto"></span>
+
+    <script>
+      const number = Number(window.prompt('Digite um número'));
+      const number2 = Number(window.prompt('Digite um outro número'));
+
+      const quociente = number / number2;
+      const resto = number % number2;
+
+      const result1 = document.querySelector('.number');
+      const result2 = document.querySelector('.number2');
+      const result3 = document.querySelector('.quociente');
+      const result4 = document.querySelector('.resto');
+
+      result1.innerHTML = number;
+      result2.innerHTML = number2;
+      result3.innerHTML = quociente;
+      result4.innerHTML = resto;
+    </script>
+  </body>
+</html>

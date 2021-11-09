@@ -1,0 +1,30 @@
+<!-- 8) Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F – 32), leu um
+valor de temperatura em Fahrenheit e exibi-lo em Celsius  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 8</title>
+  </head>
+  <body>
+    <span>Temperatura em graus Fahrenheit</span>
+    <span class="fahrenheit"></span>
+    <br />
+    <span>Temperatura convertida em graus Celsius: </span>
+    <span class="celsius"></span>
+
+    <script>
+      const fahrenheit = Number(
+        window.prompt('Qual é a temperatura em graus Fahrenheit?')
+      );
+
+      const conversao = ((fahrenheit - 32) * 5) / 9;
+
+      const telaFahrenheit = document.querySelector('.fahrenheit');
+      const telaCelsius = document.querySelector('.celsius');
+
+      telaFahrenheit.innerHTML = fahrenheit;
+      telaCelsius.innerHTML = conversao;
+    </script>
+  </body>
+</html>
