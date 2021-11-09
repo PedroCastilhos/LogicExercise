@@ -1,0 +1,36 @@
+<!-- 19) Ler dois valores (considere que não serão lidos valores iguais) e escrever o maior deles.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 19</title>
+  </head>
+  <body>
+    <span>Primeiro número escolhido: </span>
+    <span class="firstNumber"></span>
+    <br />
+    <span>Segundo número escolhido </span>
+    <span class="secondNumber"></span>
+    <br />
+
+    <span class="answer"></span>
+
+    <script>
+      const firstNumber = Number(window.prompt('Escolha um número:'));
+      const secondNumber = Number(window.prompt('Escolha outro número:'));
+
+      const screenFirst = document.querySelector('.firstNumber');
+      const screenSecond = document.querySelector('.secondNumber');
+      const screenAnswer = document.querySelector('.answer');
+
+      screenFirst.innerHTML = firstNumber;
+      screenSecond.innerHTML = secondNumber;
+
+      if (firstNumber > secondNumber) {
+        screenAnswer.innerHTML = `O número ${firstNumber} é maior que ${secondNumber}.`;
+      } else {
+        screenAnswer.innerHTML = `O número ${secondNumber} é maior que ${firstNumber}.`;
+      }
+    </script>
+  </body>
+</html>

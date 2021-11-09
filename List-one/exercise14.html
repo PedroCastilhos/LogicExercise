@@ -1,0 +1,33 @@
+<!-- 14) Ler um valor e escrever a mensagem É MAIOR QUE 10! se o valor lido for maior que 10, caso
+contrário escrever NÃO É MAIOR QUE 10! -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 14</title>
+  </head>
+  <body>
+    <span>Número escolhido: </span>
+    <span class="number"></span>
+    <br />
+    <span>É maior que 10? </span>
+    <span class="question"></span>
+
+    <script>
+      const number = Number(window.prompt('Digite qualquer número, menos 10.'));
+
+      const screenNumber = document.querySelector('.number');
+      const screenQuestion = document.querySelector('.question');
+
+      screenNumber.innerHTML = number;
+
+      if (number > 10) {
+        screenQuestion.innerHTML = `O número ${number} é maior que dez.`;
+      } else if (number < 10) {
+        screenQuestion.innerHTML = `O número ${number} é menor que dez.`;
+      } else {
+        screenQuestion.innerHTML = `O número ${number} é igual a dez.`;
+      }
+    </script>
+  </body>
+</html>

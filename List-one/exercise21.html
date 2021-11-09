@@ -1,0 +1,38 @@
+<!-- 21) Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os
+minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é
+de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 21</title>
+  </head>
+  <body>
+    <span>Horário de ínicio: </span>
+    <span class="start"></span>
+    <br />
+    <span>Horário de encerramento: </span>
+    <span class="end"></span>
+    <br />
+    <span>Duração da partida:</span>
+    <span class="duration"></span>
+
+    <script>
+      const start = Number(window.prompt('Que horas começou a partida?'));
+      const end = Number(window.prompt('Que horas encerrou a partida?'));
+
+      const screenStart = document.querySelector('.start');
+      const screenEnd = document.querySelector('.end');
+      const screenDuration = document.querySelector('.duration');
+
+      screenStart.innerHTML = start;
+      screenEnd.innerHTML = end;
+
+      if (start > end) {
+        screenDuration.innerHTML = `${-(start - 24 - end)} hora(s)`;
+      } else {
+        screenDuration.innerHTML = `${-(start - end)} hora(s)`;
+      }
+    </script>
+  </body>
+</html>

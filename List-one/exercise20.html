@@ -1,0 +1,36 @@
+<!-- 20) Ler dois valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 20</title>
+  </head>
+  <body>
+    <span>Primeiro número escolhido: </span>
+    <span class="firstNumber"></span>
+    <br />
+    <span>Segundo número escolhido </span>
+    <span class="secondNumber"></span>
+    <br />
+    <span>Ordem crescente dos números</span>
+    <span class="answer"></span>
+
+    <script>
+      const firstNumber = Number(window.prompt('Escolha um número:'));
+      const secondNumber = Number(window.prompt('Escolha outro número:'));
+
+      const screenFirst = document.querySelector('.firstNumber');
+      const screenSecond = document.querySelector('.secondNumber');
+      const screenAnswer = document.querySelector('.answer');
+
+      screenFirst.innerHTML = firstNumber;
+      screenSecond.innerHTML = secondNumber;
+
+      if (firstNumber > secondNumber) {
+        screenAnswer.innerHTML = `${secondNumber} , ${firstNumber}`;
+      } else {
+        screenAnswer.innerHTML = `${firstNumber} , ${secondNumber}`;
+      }
+    </script>
+  </body>
+</html>

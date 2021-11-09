@@ -1,0 +1,45 @@
+<!-- 17) Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever
+uma mensagem que diga se o aluno foi ou não aprovado (considerar que nota igual ou maior que 6 o
+aluno é aprovado). Escrever também a média calculada.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 17</title>
+  </head>
+  <body>
+    <span>Nota da primeira avaliação: </span>
+    <span class="firstExam"></span>
+    <br />
+    <span>Nota da segunda avaliação: </span>
+    <span class="secondExam"></span>
+    <br />
+    <span>Média das notas: </span>
+    <span class="media"></span>
+    <br />
+    <span>Resultado final: </span>
+    <span class="result"></span>
+
+    <script>
+      const firstExam = Number(window.prompt('Nota da primeira prova:'));
+      const secondExam = Number(window.prompt('Nota da segunda prova:'));
+
+      const media = (firstExam + secondExam) / 2;
+
+      const screenFirst = document.querySelector('.firstExam');
+      const screenSecond = document.querySelector('.secondExam');
+      const screenMedia = document.querySelector('.media');
+      const screenResult = document.querySelector('.result');
+
+      screenFirst.innerHTML = firstExam;
+      screenSecond.innerHTML = secondExam;
+      screenMedia.innerHTML = media;
+
+      if (media >= 6) {
+        screenResult.innerHTML = `APROVADO!`;
+      } else {
+        screenResult.innerHTML = `REPROVADO!.`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 18) Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma mensagem que diga se ela
+poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 18</title>
+  </head>
+  <body>
+    <span>Ano de nascimento: </span>
+    <span class="year"></span>
+    <br />
+    <span>Autorização: </span>
+    <span class="answer"></span>
+
+    <script>
+      const year = Number(window.prompt('Em que ano tu nascestes?'));
+
+      const answer = 2021 - year;
+
+      const screenYear = document.querySelector('.year');
+      const screenAnswer = document.querySelector('.answer');
+
+      screenYear.innerHTML = year;
+
+      if (answer >= 18) {
+        screenAnswer.innerHTML = `Você pode votar, pois tem mais de 18 anos!`;
+      } else {
+        screenAnswer.innerHTML = `Você não pode botar pois tem menos de 18 anos!`;
+      }
+    </script>
+  </body>
+</html>
