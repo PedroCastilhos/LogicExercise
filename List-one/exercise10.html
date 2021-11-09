@@ -1,0 +1,42 @@
+<!-- 10) O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do
+distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor
+seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro,
+calcular e escrever o custo final ao consumidor.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 10</title>
+  </head>
+  <body>
+    <span>O preço do carro é: </span>
+    <span class="price"></span>
+    <br />
+    <span>O lucro do distribuidor será de: </span>
+    <span class="profit"></span>
+    <br />
+    <span>O valor dos impostos sobre o carro é de: </span>
+    <span class="tax"></span>
+    <br />
+    <span>O custo total do carro ficará: </span>
+    <span class="total"></span>
+
+    <script>
+      const price = Number(window.prompt('Qual é o preço do carro?'));
+      const profit = (price * 28) / 100;
+      const tax = (price * 45) / 100;
+
+      const total = price + profit + tax;
+
+      const numberPrice = document.querySelector('.price');
+      const numberProfit = document.querySelector('.profit');
+      const numberTax = document.querySelector('.tax');
+      const numberTotal = document.querySelector('.total');
+
+      numberPrice.innerHTML = `R$ ${price}`;
+      numberProfit.innerHTML = `R$ ${profit.toFixed(0)}`;
+      numberTax.innerHTML = `R$ ${tax.toFixed(0)}`;
+      numberTotal.innerHTML = `R$ ${total.toFixed(0)}`;
+    </script>
+  </body>
+</html>

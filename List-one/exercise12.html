@@ -1,0 +1,30 @@
+<!-- 12) Escreva um algoritmo para ler uma temperatura em graus Fahrenheit, calcular e escrever o valor
+correspondente em graus Celsius. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 12</title>
+  </head>
+  <body>
+    <span>Temperatura em graus Fahrenheit</span>
+    <span class="fahrenheit"></span>
+    <br />
+    <span>Temperatura convertida em graus Celsius: </span>
+    <span class="celsius"></span>
+
+    <script>
+      const fahrenheit = Number(
+        window.prompt('Qual é a temperatura em graus Fahrenheit?')
+      );
+
+      const conversao = ((fahrenheit - 32) * 5) / 9;
+
+      const telaFahrenheit = document.querySelector('.fahrenheit');
+      const telaCelsius = document.querySelector('.celsius');
+
+      telaFahrenheit.innerHTML = fahrenheit;
+      telaCelsius.innerHTML = conversao;
+    </script>
+  </body>
+</html>

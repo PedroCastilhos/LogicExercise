@@ -1,0 +1,39 @@
+<!-- 13) Faça um algoritmo que leia três notas de um aluno, calcule e escreva a média final deste aluno.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 13</title>
+  </head>
+  <body>
+    <span>A nota da primeira avaliação é: </span>
+    <span class="firstExam"></span>
+    <br />
+    <span>A nota da segunda avaliação é: </span>
+    <span class="secondExam"></span>
+    <br />
+    <span>A nota da terceira avaliação é: </span>
+    <span class="thirdExam"></span>
+    <br />
+    <span>A média final é: </span>
+    <span class="average"></span>
+
+    <script>
+      const exam1 = Number(window.prompt('Nota da primeira avaliação'));
+      const exam2 = Number(window.prompt('Nota da segunda avaliação'));
+      const exam3 = Number(window.prompt('Nota da terceira avaliação'));
+
+      const average = (exam1 + exam2 + exam3) / 3;
+
+      const firstExam = document.querySelector('.firstExam');
+      const secondExam = document.querySelector('.secondExam');
+      const thirdExam = document.querySelector('.thirdExam');
+      const total = document.querySelector('.average');
+
+      firstExam.innerHTML = exam1;
+      secondExam.innerHTML = exam2;
+      thirdExam.innerHTML = exam3;
+      total.innerHTML = average;
+    </script>
+  </body>
+</html>
