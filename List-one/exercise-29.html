@@ -1,9 +1,10 @@
-<!-- 28) Ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.    -->
+<!-- 29) Ler 3 valores (considere que não serão informados valores iguais) e escrever a soma dos 2
+maiores.     -->
 
 <!DOCNumber html>
 <html lang="pt-br">
   <head>
-    <title>Exercise 28</title>
+    <title>Exercise 29</title>
   </head>
   <body>
     <hr />
@@ -16,7 +17,7 @@
     <span>Número 3: </span>
     <span class="number3"></span>
     <hr />
-    <span class="maior"></span>
+    <span class="soma"></span>
     <hr />
 
     <script>
@@ -27,19 +28,28 @@
       const screenNumber1 = document.querySelector('.number1');
       const screenNumber2 = document.querySelector('.number2');
       const screenNumber3 = document.querySelector('.number3');
-      const screenMaiorNumero = document.querySelector('.maior');
+      const screenSoma = document.querySelector('.soma');
 
       screenNumber1.innerHTML = number1;
       screenNumber2.innerHTML = number2;
       screenNumber3.innerHTML = number3;
 
-      if (number1 > number2 && number3) {
-        screenMaiorNumero.innerHTML = `O número ${number1} é o maior.`;
-      } else if (number2 > number3 && number1) {
-        screenMaiorNumero.innerHTML = `O número ${number2} é o maior.`;
+      if (number1 > number2 && number2 > number3) {
+        screenSoma.innerHTML = `A soma do número ${number1} e ${number2} é ${
+          number1 + number2
+        }.`;
+      } else if (number2 > number1 && number1 > number3) {
+        screenSoma.innerHTML = `A soma do número ${number2} e ${number3} é ${
+          number2 + number3
+        }.`;
       } else {
-        screenMaiorNumero.innerHTML = `O número ${number3} é o maior.`;
+        screenSoma.innerHTML = `A soma do número ${number1} e ${number3} é ${
+          number1 + number3
+        }.`;
       }
+
+      //Tentativas, number1 > number2 && number2 > number3 && number1 > number3
+      // E também number2 > number1 && number2 > number3
     </script>
   </body>
 </html>

@@ -1,0 +1,58 @@
+<!-- 25) Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e
+escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior
+ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 25</title>
+  </head>
+  <body>
+    <span>Número da conta: </span>
+    <span class="numero"></span>
+    <br />
+    <span>Saldo: </span>
+    <span class="saldo"></span>
+    <br />
+    <span>Gasto em crédito: </span>
+    <span class="credito"></span>
+    <br />
+    <span>Gasto em débito: </span>
+    <span class="debito"></span>
+    <hr />
+    <span class="situacao"></span>
+
+    <script>
+      const nome = window.prompt('Qual é o seu nome?');
+      const numero = Number(
+        window.prompt('Qual é número da conta?', 'Digite o número aqui')
+      );
+      const saldo = Number(
+        window.prompt('Quanto é o saldo atual?', 'Digite o número aqui')
+      );
+      const credito = Number(
+        window.prompt('Quanto é gasto em crédito?', 'Digite o número aqui')
+      );
+      const debito = Number(
+        window.prompt('Quanto é gasto em débito?', 'Digite o número aqui')
+      );
+
+      document.querySelector('.numero').innerHTML = numero;
+      document.querySelector('.saldo').innerHTML = saldo;
+      document.querySelector('.credito').innerHTML = credito;
+      document.querySelector('.debito').innerHTML = debito;
+
+      const situacao = saldo - (debito + credito);
+
+      if (situacao >= 0) {
+        document.querySelector(
+          '.situacao'
+        ).innerHTML = `${nome}, você está com o Saldo positivo.`;
+      } else {
+        document.querySelector(
+          '.situacao'
+        ).innerHTML = `${nome}, você está com o Saldo negativo.`;
+      }
+    </script>
+  </body>
+</html>

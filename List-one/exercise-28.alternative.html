@@ -1,0 +1,25 @@
+<!-- 28) Ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.    -->
+
+<!DOCNumber html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 28</title>
+  </head>
+  <body>
+    <span>O maior número é: </span>
+    <span class="maiorNumero"></span>
+
+    <script>
+      var numeros = [];
+
+      while (numeros.length <= 2) {
+        numeros.push(Number(window.prompt('Digite um número')));
+      }
+
+      var maior = Math.max.apply(null, numeros);
+      console.log(maior);
+
+      document.querySelector('.maiorNumero').innerHTML = maior;
+    </script>
+  </body>
+</html>

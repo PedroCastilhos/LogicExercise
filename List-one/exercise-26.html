@@ -1,0 +1,54 @@
+<!-- 26) Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima em estoque e
+quantidade mínima em estoque de um produto. Calcular e escrever a quantidade média ((quantidade
+média = quantidade máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual
+a quantidade média escrever a mensagem 'Não efetuar compra', senão escrever a mensagem 'Efetuar
+compra'.    -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 26</title>
+  </head>
+  <body>
+    <span>Quantidade do estoque atual: </span>
+    <span class="atual"></span>
+    <br />
+    <span>Quantidade minima: </span>
+    <span class="maximo"></span>
+    <br />
+    <span>Quantidade maxima: </span>
+    <span class="minimo"></span>
+    <hr />
+    <span class="situacao"></span>
+
+    <script>
+      const atual = Number(
+        window.prompt('Quanto é o estoque atual', 'Digite o número aqui')
+      );
+      const maximo = Number(
+        window.prompt('Quanto é o estoque maximo?', 'Digite o número aqui')
+      );
+      const minimo = Number(
+        window.prompt('Quanto é o estoque mínimo?', 'Digite o número aqui')
+      );
+
+      const screenAtual = (document.querySelector('.atual').innerHTML = atual);
+      const screenMaximo = (document.querySelector('.maximo').innerHTML =
+        maximo);
+      const screenMinimo = (document.querySelector('.minimo').innerHTML =
+        minimo);
+
+      const media = (minimo + maximo) / 2;
+
+      if (media <= atual) {
+        document.querySelector(
+          '.situacao'
+        ).innerHTML = `Você pode efetuar a compra.`;
+      } else {
+        document.querySelector(
+          '.situacao'
+        ).innerHTML = `Você não pode efetuar a compra.`;
+      }
+    </script>
+  </body>
+</html>
