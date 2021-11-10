@@ -1,0 +1,45 @@
+<!-- 23) Para o enunciado a seguir foi elaborado um algoritmo em Português Estruturado que contém
+erros, identifique os erros no algoritmo apresentado abaixo:   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 23</title>
+  </head>
+  <body>
+    <span>O seu sexo é: </span>
+    <span class="sexo"></span>
+    <br />
+    <span>Sua altura é: </span>
+    <span class="altura"></span>
+    <br />
+    <span>Seu peso ideal é: </span>
+    <span class="peso"></span>
+
+    <script>
+      const sexo = window.prompt(
+        'Qual é o seu sexo?',
+        'Se for masculino digite "M", se for feminino digite "F"'
+      );
+      const altura = Number(window.prompt('Qual é a sua altura'));
+
+      const imcMasculino = 72.7 * altura - 58;
+      const imcFeminino = 62.1 * altura - 44.7;
+
+      const screenSexo = document.querySelector('.sexo');
+      const screenAltura = document.querySelector('.altura');
+      const screenPeso = document.querySelector('.peso');
+
+      screenSexo.innerHTML = sexo;
+      screenAltura.innerHTML = altura;
+
+      if (sexo == 'M') {
+        screenPeso.innerHTML = `Seu peso ideal é ${imcMasculino.toFixed(2)}Kg`;
+      } else if (sexo == 'F') {
+        screenPeso.innerHTML = `Seu peso ideal é ${imcFeminino.toFixed(2)}Kg`;
+      } else {
+        alert('Você digitiu um sexo indefinido');
+      }
+    </script>
+  </body>
+</html>

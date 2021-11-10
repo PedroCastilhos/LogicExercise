@@ -1,0 +1,25 @@
+<!-- 27) Ler um valor e escrever se é positivo, negativo ou zero.    -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 27</title>
+  </head>
+  <body>
+    <span class="type"></span>
+
+    <script>
+      const number = Number(window.prompt('Digite um valor'));
+
+      const screenType = document.querySelector('.type');
+
+      if (number > 0) {
+        screenType.innerHTML = `O número ${number} é Positivo.`;
+      } else if (number < 0) {
+        screenType.innerHTML = `O número ${number} é Negativo.`;
+      } else {
+        screenType.innerHTML = `O número escolhido foi Zero.`;
+      }
+    </script>
+  </body>
+</html>

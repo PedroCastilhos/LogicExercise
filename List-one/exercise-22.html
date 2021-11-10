@@ -1,0 +1,53 @@
+<!-- 22) A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais
+de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%.
+Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva
+o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas
+(considere que o mês possua 4 semanas exatas).   -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 22</title>
+  </head>
+  <body>
+    <span>Número de horas trabalhas esse mês: </span>
+    <span class="horas"></span>
+    <br />
+    <span>Salário por hora: </span>
+    <span class="salario"></span>
+    <br />
+    <span>Salário total: </span>
+    <span class="total"></span>
+
+    <script>
+      const horas = Number(
+        window.prompt(
+          'Quantas horas os funcionários trabalharam em um mês?',
+          'Digite no mínimo 160 horas'
+        )
+      );
+      const salario = Number(window.prompt('Quanto é o salário por hora?'));
+
+      const horasTrabalhadasAMais = horas - 160;
+      const acrescimo = (salario * 50) / 100;
+      var total = 0;
+
+      const screenHoras = document.querySelector('.horas');
+      const screenSalario = document.querySelector('.salario');
+      const screenTotal = document.querySelector('.total');
+
+      screenHoras.innerHTML = horas;
+      screenSalario.innerHTML = salario;
+
+      if (horas > 160) {
+        screenTotal.innerHTML = `O funcionário receberá R$${(total =
+          salario * horas +
+          horasTrabalhadasAMais *
+            acrescimo)}, pelas horas extras trabalhas esse mês.`;
+      } else {
+        screenTotal.innerHTML = `O trabalhador receberá o salário integral que é R$${(total =
+          salario * horas)}`;
+      }
+    </script>
+  </body>
+</html>

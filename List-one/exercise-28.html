@@ -1,0 +1,45 @@
+<!-- 28) Ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.    -->
+
+<!DOCNumber html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 28</title>
+  </head>
+  <body>
+    <hr />
+    <span>Número 1: </span>
+    <span class="number1"></span>
+    <hr />
+    <span>Número 2: </span>
+    <span class="number2"></span>
+    <hr />
+    <span>Número 3: </span>
+    <span class="number3"></span>
+    <hr />
+    <span class="maior"></span>
+    <hr />
+
+    <script>
+      const number1 = Number(window.prompt('Digite um valor'));
+      const number2 = Number(window.prompt('Digite outro valor'));
+      const number3 = Number(window.prompt('Digite mais um valor'));
+
+      const screenNumber1 = document.querySelector('.number1');
+      const screenNumber2 = document.querySelector('.number2');
+      const screenNumber3 = document.querySelector('.number3');
+      const screenMaiorNumero = document.querySelector('.maior');
+
+      screenNumber1.innerHTML = number1;
+      screenNumber2.innerHTML = number2;
+      screenNumber3.innerHTML = number3;
+
+      if (number1 > number2 && number3) {
+        screenMaiorNumero.innerHTML = `O número ${number1} é o maior.`;
+      } else if (number2 > number1 && number3) {
+        screenMaiorNumero.innerHTML = `O número ${number2} é o maior.`;
+      } else if (number3 > number2 && number1) {
+        screenMaiorNumero.innerHTML = `O número ${number3} é o maior.`;
+      }
+    </script>
+  </body>
+</html>
