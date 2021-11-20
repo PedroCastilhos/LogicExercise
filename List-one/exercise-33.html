@@ -1,0 +1,38 @@
+<!-- 33) Ler dois valores e imprimir uma das três mensagens a seguir:
+‘Números iguais’, caso os números sejam iguais
+‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
+‘Segundo maior’, caso o segundo seja maior que o primeiro.     -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 33</title>
+  </head>
+  <body>
+    <hr />
+    <span>Número 1: </span>
+    <span class="number1"></span>
+    <hr />
+    <span>Número 2: </span>
+    <span class="number2"></span>
+    <hr />
+    <span class="calculation"></span>
+
+    <script>
+      const number1 = Number(window.prompt('Digite um valor'));
+      const number2 = Number(window.prompt('Digite outro valor'));
+
+      document.querySelector('.number1').innerHTML = number1;
+      document.querySelector('.number2').innerHTML = number2;
+      const screenCalculation = document.querySelector('.calculation');
+
+      if (number1 > number2) {
+        screenCalculation.innerHTML = `O número ${number1} é maior que o número ${number2}.`;
+      } else if (number2 > number1) {
+        screenCalculation.innerHTML = `O número ${number2} é maior que o número ${number1}.`;
+      } else {
+        screenCalculation.innerHTML = `Os dois números são iguais.`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!-- 9) Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado
+seu raio e sua altura. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 9</title>
+  </head>
+  <body>
+    <span>Raio do cilindro: </span>
+    <span class="raio"></span>
+    <br />
+    <span>Altura do cilindro: </span>
+    <span class="altura"></span>
+    <br />
+    <span>O volume do cilindro é: </span>
+    <span class="volume"></span>
+
+    <script>
+      const raio = Number(window.prompt('Qual é o raio do cilindro?'));
+      const altura = Number(window.prompt('Qual é a altura do cilindro?'));
+
+      const volume = 3.14 * raio ** 2 * altura;
+
+      const result = document.querySelector('.raio');
+      const result2 = document.querySelector('.altura');
+      const result3 = document.querySelector('.volume');
+
+      result.innerHTML = raio;
+      result2.innerHTML = altura;
+      result3.innerHTML = volume;
+    </script>
+  </body>
+</html>

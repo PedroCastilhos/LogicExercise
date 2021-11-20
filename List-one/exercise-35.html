@@ -1,0 +1,30 @@
+<!--  35) Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+Álcool: até 20 litros, desconto de 3% por litro 
+acima de 20 litros, desconto de 5% por litro.
+Gasolina: até 20 litros, desconto de 4% por litro 
+acima de 20 litros, desconto de 6% por litro
+Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da
+seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se
+que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.      -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 33</title>
+  </head>
+  <body>
+    <script>
+      const x = Number(window.prompt('Digite um valor'));
+      const y = Number(window.prompt('Digite outro valor'));
+      const z = x * y + 5;
+
+      if (z <= 0) {
+        alert(`${z} = A, menor que 0`);
+      } else if (z <= 100) {
+        alert(`${z} = B, menor que 100 maior que 0`);
+      } else {
+        alert(`${z} = C, maior que 100`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 32) Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome
+do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.      -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exercise 32</title>
+  </head>
+  <body>
+    <hr />
+    <span>Gols do time 1: </span>
+    <span class="team1"></span>
+    <hr />
+    <span>Gols do time 2: </span>
+    <span class="team2"></span>
+    <hr />
+    <span class="result"></span>
+
+    <script>
+      const team1 = Number(window.prompt('Quantos gols o time 1 fez?'));
+      const team2 = Number(window.prompt('Quantos gols o time 2 fez?'));
+
+      document.querySelector('.team1').innerHTML = team1;
+      document.querySelector('.team2').innerHTML = team2;
+      const screenResult = document.querySelector('.result');
+
+      if (team1 > team2) {
+        screenResult.innerHTML = `O time 1 venceu a partida por ${team1} a ${team2}.`;
+      } else if (team2 > team1) {
+        screenResult.innerHTML = `O time 2 venceu a partida por ${team2} a ${team1}.`;
+      } else {
+        screenResult.innerHTML = `A partida terminou empatada em ${team2} a ${team1}.`;
+      }
+    </script>
+  </body>
+</html>
